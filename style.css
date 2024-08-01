@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Notable&family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --primary-color: rgb(138, 43, 226);
+  --primary-color-light: rgb(197, 148, 243);
+  --primary-color-dark: rgb(98, 25, 167);
+  --primary-shadow-dark: rgb(87, 8, 161);
+  --background-primary: rgb(43, 59, 108);
+  --background-gradient-primary: rgba(43, 59, 108, 1);
+  --background-gradient-secondary: rgba(28, 28, 33, 1);
+  --button-primary: rgb(219, 219, 219);
+  --light: rgb(255, 255, 255);
+  --dark: rgb(0, 0, 0);
+  --grey: rgb(172, 171, 171);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--background-primary);
+  background: radial-gradient(
+    circle,
+    var(--background-gradient-primary) 0%,
+    var(--background-gradient-secondary) 89%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc {
+  /* max-width: max-content; */
+  /* min-width: max-content; */
+  background-color: var(--primary-color);
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: 10px 10px var(--primary-color-dark),
+    inset 5px 5px 5px var(--primary-color-light), 15px 15px 4px var(--dark);
+}
+
+.input {
+  height: 7em;
+  max-width: 400px;
+  background-color: var(--primary-color-dark);
+  margin: 20px 0 30px 0;
+  border-radius: 20px;
+  box-shadow: inset 7px 7px var(--primary-shadow-dark),
+    inset -1px -1px 5px var(--dark), inset 12px 12px 6px var(--dark);
+}
+
+.input input {
+  direction: rtl;
+  text-align: right;
+  background: transparent;
+  max-width: 100%;
+  height: 100%;
+  font-size: 3em;
+  padding-left: 20px;
+  padding-right: 10px;
+  /* border: solid 2px white; */
+  border-radius: 20px;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--primary-color-light);
+  border: none;
+}
+
+.buttons {
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px 80px 80px;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.buttons > div {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: min(26%, 20px) 0px;
+  text-align: center;
+  box-shadow: 5px 5px var(--grey), inset 3px 3px 3px var(--primary-color-light),
+    8px 8px 5px var(--dark);
+  border: none;
+  background-color: var(--button-primary);
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.9em;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* .buttons > div h2 {
+  color: var(--dark);
+  padding: 7px 0 10px 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.7em;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+} */
+
+.box1 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.test {
+  animation: anim 150ms linear;
+}
+
+@keyframes anim {
+  0% {
+    height: 100%;
+    width: 100%;
+    box-shadow: 5px 5px var(--grey),
+      inset 3px 3px 3px var(--primary-color-light), 8px 8px 5px var(--dark);
+  }
+  50% {
+    height: 95%;
+    width: 95%;
+    font-size: 1.7em;
+  }
+
+  100% {
+    height: 100%;
+    width: 100%;
+    box-shadow: 5px 5px var(--grey),
+      inset 3px 3px 3px var(--primary-color-light), 8px 8px 5px var(--dark);
+  }
+}
